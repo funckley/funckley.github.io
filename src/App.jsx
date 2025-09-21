@@ -266,20 +266,41 @@ function HomePage() {
               lineHeight: 1.7, 
               marginBottom: isMobile ? '1rem' : '1.5rem' 
             }}>
-              I am a master's student and multidisciplinary researcher at the University of Michigan, where I explore the intersections of artificial intelligence, computational creativity, and hybrid systems for music and media technology. My work combines mathematical modeling, rule-based approaches, and machine learning to develop creative AI systems with applications in audio, interaction design, and virtual environments. In addition to my research, I am a composer, game designer, and developer.
+              I am an independent researcher based in Greater Tokyo, Japan, recently graduated with an M.A. from the University of Michigan. I explore the intersections of artificial intelligence, creative practice, and philosophical theory through a multidisciplinary approach that spans computer science, epistemology, and the historical dynamics of technology in society.
             </p>
+            <div style={{ 
+              fontSize: isMobile ? '1rem' : '1.1rem', 
+              lineHeight: 1.7, 
+              marginBottom: isMobile ? '1rem' : '1.5rem' 
+            }}>
+              <p style={{ marginBottom: '1rem' }}>My research unfolds across three primary branches:</p>
+              <div style={{ paddingLeft: '1rem' }}>
+                <p style={{ marginBottom: '1rem' }}>
+                  <strong>1. Computational Creativity & AI Tools</strong><br/>
+                  I design intelligent systems to assist and stimulate creativity within the artistic community—including musicians, sound designers, and game developers. These tools are informed by both rule-based and data-driven methods, with applications in audio, interaction, and generative media.
+                </p>
+                <p style={{ marginBottom: '1rem' }}>
+                  <strong>2. Epistemology of Creativity & Human Action</strong><br/>
+                  I conduct theoretical research on the nature of creativity and human action, and how these fundamentally differ from—or align with—artificial intelligence. This includes inquiries into epistemology, logic, and Gödel's Incompleteness Theorems as a foundation for understanding the limits of formal and algorithmic systems. This perspective informs the design of tools that aim not to replicate creativity, but to better stimulate and extend human creative potential.
+                </p>
+                <p style={{ marginBottom: '1rem' }}>
+                  <strong>3. Philosophy, Economics, and Technology in Society</strong><br/>
+                  I conduct interdisciplinary research in epistemology, aesthetics, and ethics, while also drawing from economic history and the cultural evolution of technology to analyze how ideas shape tools—and vice versa.
+                </p>
+              </div>
+            </div>
             <p style={{ 
               fontSize: isMobile ? '1rem' : '1.1rem', 
               lineHeight: 1.7, 
               marginBottom: isMobile ? '1rem' : '1.5rem' 
             }}>
-              My specific interests include hybrid and explainable AI, cognitive modeling, multi-agent collaborative systems, human-computer interaction, virtual and extended reality, audio and music synthesis, and digital signal processing.
+              During my graduate studies at the University of Michigan, I collaborated with faculty and fellows across the Departments of Robotics, Performing Arts Technology, Psychology, and the School of Art & Design. My master's thesis—advised by Hao-Wen Dong, John Granzow, and Patrícia Alves-Oliveira—investigated the design and evaluation of intelligent creative tools built on contrasting paradigms: axiomatic, rule-based systems versus purely data-driven models, and how we might design effective hybrid systems grounded in a deeper understanding of human creative action. The work combined technical development with a critical theoretical component, exploring not only how AI can assist human creativity, but also how excessive reliance on data-driven methods may ultimately distort our conception of creativity itself. This foundational inquiry continues to shape the next phase of my research.
             </p>
             <p style={{ 
               fontSize: isMobile ? '1rem' : '1.1rem', 
               lineHeight: 1.7 
             }}>
-              Currently, I am conducting research under the supervision of Professor Hao-Wen Dong, focusing on integrating machine learning and rule-based systems to create generative models for music and interactive media. This work leverages geometrical and statistical techniques to enhance creative AI frameworks.
+              In addition to research, I am a composer, sound artist, and game designer, with a focus on systems-based creativity and computational approaches to artistic expression.
             </p>
           </div>
         </div>
