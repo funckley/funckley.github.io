@@ -1,10 +1,54 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+// Custom hook for responsive design
+function useWindowSize() {
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+    
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return windowSize;
+}
 
 export default function ContactPage() {
+  const { width } = useWindowSize();
+  const isMobile = width <= 768;
+  
   return (
-    <div style={{ paddingTop: 80, color: '#d8f7ffff' }}>
-      <h1>Contact</h1>
-      <p>Email: <a href="mailto:ackleye@umich.edu" style={{ color: '#61dafbaa' }}>ackleye@umich.edu</a></p>
+    <div style={{ 
+      paddingTop: 80, 
+      color: '#d8f7ffff',
+      padding: isMobile ? '80px 1rem 2rem 1rem' : '80px 2rem 2rem 2rem',
+      maxWidth: 1300,
+      margin: '0 auto'
+    }}>
+      <h1 style={{
+        fontSize: isMobile ? '2rem' : '2.5rem',
+        marginBottom: isMobile ? '1rem' : '1.5rem'
+      }}>Contact</h1>
+      <p style={{
+        fontSize: isMobile ? '1rem' : '1.1rem',
+        lineHeight: 1.6
+      }}>
+        Email: <a href="mailto:ackleye@umich.edu" style={{ 
+          color: '#61dafbaa',
+          fontSize: isMobile ? '1rem' : '1.1rem'
+        }}>ackleye@umich.edu</a>
+      </p>
     </div>
   );
 }
