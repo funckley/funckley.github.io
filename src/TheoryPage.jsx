@@ -31,7 +31,7 @@ export default function TheoryPage() {
   return (
     <div style={{ 
       paddingTop: 80, 
-      color: '#d8f7ffff',
+      color: '#FCFAF2',
       padding: isMobile ? '80px 1rem 2rem 1rem' : '80px 2rem 2rem 2rem',
       maxWidth: 1300,
       margin: '0 auto'

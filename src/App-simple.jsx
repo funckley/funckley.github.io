@@ -5,8 +5,8 @@ function App() {
   
   return (
     <div style={{ 
-      background: '#181818', 
-      color: '#d8f7ffff', 
+      background: '#1C1C1C', 
+      color: '#FCFAF2', 
       minHeight: '100vh', 
       padding: '20px',
       fontFamily: 'Arial, sans-serif'

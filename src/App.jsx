@@ -63,8 +63,8 @@ function Navbar() {
         left: 0, 
         right: 0, 
         zIndex: 1000,
-        background: '#181818', 
-        color: '#d8f7ffff', 
+        background: '#1C1C1C', 
+        color: '#FCFAF2', 
         display: 'flex', 
         alignItems: 'center',
         justifyContent: 'space-between', 
@@ -78,7 +78,7 @@ function Navbar() {
             fontFamily: 'serif',
             fontSize: isMobile ? '1.2rem' : '1.4rem',
             fontWeight: 400,
-            color: '#d8f7ffff',
+            color: '#FCFAF2',
             textDecoration: 'none',
             flexShrink: 0
           }}
@@ -97,14 +97,14 @@ function Navbar() {
                 key={link.to} 
                 to={link.to} 
                 style={{ 
-                  color: '#d8f7ffff', 
+                  color: '#FCFAF2', 
                   textDecoration: 'none', 
                   fontSize: '1rem',
                   padding: '0.5rem',
                   borderRadius: '4px',
                   transition: 'background-color 0.3s ease'
                 }}
-                onMouseEnter={(e) => e.target.style.backgroundColor = 'rgba(216, 247, 255, 0.1)'}
+                onMouseEnter={(e) => e.target.style.backgroundColor = 'rgba(252, 250, 242, 0.1)'}
                 onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
               >
                 {link.label}
@@ -124,7 +124,7 @@ function Navbar() {
               border: 'none',
               cursor: 'pointer',
               padding: '0.5rem',
-              color: '#d8f7ffff',
+              color: '#FCFAF2',
               minWidth: '44px',
               minHeight: '44px',
               justifyContent: 'center',
@@ -135,7 +135,7 @@ function Navbar() {
             <span style={{
               width: '24px',
               height: '2px',
-              backgroundColor: '#d8f7ffff',
+              backgroundColor: '#FCFAF2',
               margin: '3px 0',
               transition: '0.3s',
               transform: isMenuOpen ? 'rotate(-45deg) translate(-5px, 6px)' : 'none'
@@ -143,7 +143,7 @@ function Navbar() {
             <span style={{
               width: '24px',
               height: '2px',
-              backgroundColor: '#d8f7ffff',
+              backgroundColor: '#FCFAF2',
               margin: '3px 0',
               transition: '0.3s',
               opacity: isMenuOpen ? '0' : '1'
@@ -151,7 +151,7 @@ function Navbar() {
             <span style={{
               width: '24px',
               height: '2px',
-              backgroundColor: '#d8f7ffff',
+              backgroundColor: '#FCFAF2',
               margin: '3px 0',
               transition: '0.3s',
               transform: isMenuOpen ? 'rotate(45deg) translate(-5px, -6px)' : 'none'
@@ -167,8 +167,8 @@ function Navbar() {
           top: '56px',
           left: 0,
           right: 0,
-          background: '#181818',
-          borderTop: '1px solid rgba(216, 247, 255, 0.1)',
+          background: '#1C1C1C',
+          borderTop: '1px solid rgba(252, 250, 242, 0.1)',
           padding: '0',
           boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
           zIndex: 999
@@ -181,15 +181,15 @@ function Navbar() {
               style={{
                 display: 'flex',
                 alignItems: 'center',
-                color: '#d8f7ffff',
+                color: '#FCFAF2',
                 textDecoration: 'none',
                 fontSize: '1.1rem',
                 padding: '1rem 1.5rem',
-                borderBottom: '1px solid rgba(216, 247, 255, 0.1)',
+                borderBottom: '1px solid rgba(252, 250, 242, 0.1)',
                 transition: 'background-color 0.3s ease',
                 minHeight: '44px'
               }}
-              onMouseEnter={(e) => e.target.style.backgroundColor = 'rgba(216, 247, 255, 0.1)'}
+              onMouseEnter={(e) => e.target.style.backgroundColor = 'rgba(252, 250, 242, 0.1)'}
               onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
             >
               {link.label}
@@ -245,7 +245,7 @@ function HomePage() {
             minWidth: isMobile ? '200px' : '220px', 
             borderRadius: '0 50% 50% 0', 
             overflow: 'hidden', 
-            background: '#222',
+            background: '#1C1C1C',
             alignSelf: isMobile ? 'center' : 'auto'
           }}>
             {/* Replace with your image */}
@@ -318,21 +318,21 @@ function HomePage() {
           minWidth: isMobile ? '100%' : '320px'
         }}>
           <div style={{ 
-            color: '#d8f7ffff', 
+            color: '#FCFAF2', 
             fontSize: isMobile ? '1.2rem' : '1.3rem', 
             marginBottom: '1.2rem' 
           }}>Education</div>
           <div style={{ marginBottom: '2.5rem' }}>
             <div style={{ fontWeight: 500 }}>University of Michigan</div>
-            <div style={{ color: '#d8f7ffff', fontSize: '1rem' }}>Ann Arbor, MI</div>
-            <div style={{ color: '#d8f7ffff', fontSize: '1rem' }}>May 2025</div>
+            <div style={{ color: '#FCFAF2', fontSize: '1rem' }}>Ann Arbor, MI</div>
+            <div style={{ color: '#FCFAF2', fontSize: '1rem' }}>May 2025</div>
             <div style={{ fontStyle: 'italic', marginTop: 2 }}>M.A. in Media Arts & Technology</div>
             <div>Advisor: <span style={{ textDecoration: 'underline' }}>Hao-Wen Dong</span></div>
           </div>
           <div>
             <div style={{ fontWeight: 500 }}>Azad University, Central Tehran Branch</div>
-            <div style={{ color: '#d8f7ffff', fontSize: '1rem' }}>Tehran, Iran</div>
-            <div style={{ color: '#d8f7ffff', fontSize: '1rem' }}>February 2022</div>
+            <div style={{ color: '#FCFAF2', fontSize: '1rem' }}>Tehran, Iran</div>
+            <div style={{ color: '#FCFAF2', fontSize: '1rem' }}>February 2022</div>
             <div style={{ fontStyle: 'italic', marginTop: 2 }}>B.S. in Audio Technology</div>
             <div>Advisor: Reza Sabooni</div>
           </div>
@@ -342,35 +342,35 @@ function HomePage() {
           minWidth: isMobile ? '100%' : '320px'
         }}>
           <div style={{ 
-            color: '#d8f7ffff', 
+            color: '#FCFAF2', 
             fontSize: isMobile ? '1.2rem' : '1.3rem', 
             marginBottom: '1.2rem' 
           }}>Professional Experience</div>
           <div style={{ marginBottom: '2.5rem' }}>
           <div style={{ marginBottom: '2.5rem' }}>
             <div>Robot Studio, Department of Robotics</div>
-            <div style={{ color: '#d8f7ffff', fontSize: '1rem' }}>University of Michigan, Ann Arbor, MI</div>
+            <div style={{ color: '#FCFAF2', fontSize: '1rem' }}>University of Michigan, Ann Arbor, MI</div>
             <div style={{ fontStyle: 'italic', marginTop: 2 }}>Researcher</div>
-            <div style={{ color: '#d8f7ffff', fontSize: '1rem' }}>May 2025-present</div>
-            <div style={{ color: '#d8f7ffff', fontSize: '1rem' }}>May 2024-August 2024</div>
+            <div style={{ color: '#FCFAF2', fontSize: '1rem' }}>May 2025-present</div>
+            <div style={{ color: '#FCFAF2', fontSize: '1rem' }}>May 2024-August 2024</div>
           </div>
             <div>Department of Performing Arts Technology</div>
-            <div style={{ color: '#d8f7ffff', fontSize: '1rem' }}>University of Michigan, Ann Arbor, MI</div>
+            <div style={{ color: '#FCFAF2', fontSize: '1rem' }}>University of Michigan, Ann Arbor, MI</div>
             <div style={{ fontStyle: 'italic', marginTop: 2 }}>Graduate Research Assistant</div>
-            <div style={{ color: '#d8f7ffff', fontSize: '1rem' }}>September 2023-May 2025</div>
+            <div style={{ color: '#FCFAF2', fontSize: '1rem' }}>September 2023-May 2025</div>
           </div>
           <div>
             <div>Penny W. Stamps School of Art & Design</div>
-            <div style={{ color: '#d8f7ffff', fontSize: '1rem' }}>University of Michigan, Ann Arbor, MI</div>
+            <div style={{ color: '#FCFAF2', fontSize: '1rem' }}>University of Michigan, Ann Arbor, MI</div>
             <div style={{ fontStyle: 'italic', marginTop: 2 }}>Programmer and Sound Designer</div>
-            <div style={{ color: '#d8f7ffff', fontSize: '1rem' }}>December 2023-April 2024</div>
+            <div style={{ color: '#FCFAF2', fontSize: '1rem' }}>December 2023-April 2024</div>
           </div>
         </div>
       </Section>
       <Section id="projects">
         {/* Projects grid placeholder */}
         <div style={{ 
-          color: '#d8f7ffff', 
+          color: '#FCFAF2', 
           fontSize: isMobile ? '1.3rem' : '1.5rem', 
           margin: '2rem 0 1.5rem 0' 
         }}>Recent Projects:</div>
@@ -381,7 +381,7 @@ function HomePage() {
         }}>
           {/* Example project card */}
           <div style={{ 
-            background: '#222', 
+            background: '#1C1C1C', 
             borderRadius: 8, 
             overflow: 'hidden', 
             padding: 0 
@@ -393,7 +393,7 @@ function HomePage() {
             }} />
             <div style={{ padding: '1rem' }}>
               <a href="#" style={{ 
-                color: '#d8f7ffff', 
+                color: '#FCFAF2', 
                 fontWeight: 500 
               }}>SoundInk</a>
               <div style={{ 
@@ -403,7 +403,7 @@ function HomePage() {
                 An interactive web application developed using React and the Web Audio API to support both touch and mouse interactions. This project merges technology and creative expression to provide therapeutic and educational experiences through music and art.
               </div>
               <a href="#" style={{ 
-                color: '#d8f7ffff', 
+                color: '#FCFAF2', 
                 fontStyle: 'italic', 
                 fontSize: '0.95rem' 
               }}>PROJECT PAGE</a>
@@ -419,7 +419,7 @@ function HomePage() {
 function App() {
   return (
     <Router>
-      <div style={{ background: '#181818', color: '#d8f7ffff', minHeight: '100vh', fontFamily: 'serif' }}>
+      <div style={{ background: '#1C1C1C', color: '#FCFAF2', minHeight: '100vh', fontFamily: 'serif' }}>
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
