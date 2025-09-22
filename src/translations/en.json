@@ -67,7 +67,7 @@
   "pages": {
     "technology": {
       "title": "Technology",
-      "content": "Technology page content coming soon..."
+      "intro": "This section showcases my technology projects spanning interactive applications, AI-assisted creativity tools, immersive experiences, and experimental interfaces. These works explore the intersection of computational systems with creative practice, demonstrating various approaches to human-computer collaboration in artistic contexts."
     },
     "theory": {
       "title": "Theory", 
