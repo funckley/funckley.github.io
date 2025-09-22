@@ -1,21 +1,189 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* CSS Custom Properties (Variables) for Color Management */
+
+/* CUSTOM FONTS */
+@font-face {
+  font-family: 'Kouzan';
+  src: url('/fonts/Kouzan.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
+/* DARK THEME (Default) */
+:root,
+[data-theme="dark"] {
+  /* PRIMARY COLORS - Dark Theme */
+  --color-primary-bg: #1C1C1C;     /* Main background color */
+  --color-primary-text: #FCFAF2;   /* Main text color */
+  
+  /* INTERACTIVE COLORS - Based on primary colors */
+  --color-hover-bg: rgba(252, 250, 242, 0.1);
+  --color-border: rgba(252, 250, 242, 0.3);
+  --color-border-hover: rgba(252, 250, 242, 0.5);
+  
+  /* SHADOW COLORS */
+  --color-shadow-light: rgba(0, 0, 0, 0.1);
+  --color-shadow-medium: rgba(0, 0, 0, 0.2);
+  
+  /* ACCENT COLORS */
+  --color-accent-link: #61dafbaa;
+  --color-underline: var(--color-primary-text);
+  
+  /* COMPONENT SPECIFIC - Independent navbar styling */
+  /* Navbar has its own colors separate from main content for better hierarchy */
+  --color-navbar-bg: #080808;                    /* Slightly lighter than main bg for contrast */
+  --color-navbar-text: #FCFAF2;                  /* Pure white for better contrast on dark navbar */
+  --color-navbar-hover: rgba(255, 255, 255, 0.1); /* Light hover for dark navbar */
+  --color-card-bg: var(--color-primary-bg);
+  --color-mobile-menu-border: var(--color-border);
+}
+
+/* LIGHT THEME */
+[data-theme="light"] {
+  /* PRIMARY COLORS - Light Theme */
+  --color-primary-bg: #FCFAF2;     /* Light background color */
+  --color-primary-text: #2C2C2C;   /* Dark text color */
+  
+  /* INTERACTIVE COLORS - Based on primary colors */
+  --color-hover-bg: rgba(44, 44, 44, 0.08);
+  --color-border: rgba(44, 44, 44, 0.2);
+  --color-border-hover: rgba(44, 44, 44, 0.4);
+  
+  /* SHADOW COLORS */
+  --color-shadow-light: rgba(0, 0, 0, 0.08);
+  --color-shadow-medium: rgba(0, 0, 0, 0.15);
+  
+  /* FILM GRAIN EFFECT - Real Noise */
+  --grain-size: 200px;              /* Size of noise pattern - smaller = finer noise */
+  --grain-opacity: 0.5;           /* Slightly less noise opacity for light theme */
+  
+  /* ACCENT COLORS */
+  --color-accent-link: #0066cc;
+  --color-underline: var(--color-primary-text);
+  
+  /* COMPONENT SPECIFIC - Distinct navbar colors */
+  --color-navbar-bg: #646A58;                    /* Slightly different from main bg for contrast */
+  --color-navbar-text: #FCFAF2;                  /* Dark gray for better contrast on light navbar */
+  --color-navbar-hover: rgba(26, 26, 26, 0.08);  /* Dark hover for light navbar */
+  --color-card-bg: #FFFFFF;  /* Slightly different card bg for light theme */
+  --color-mobile-menu-border: var(--color-border);
+}
+
+/*
+   THEME SWITCHING GUIDE:
+   
+   To customize DARK THEME colors, edit the [data-theme="dark"] section above
+   To customize LIGHT THEME colors, edit the [data-theme="light"] section above
+   
+   The theme will automatically switch when users toggle the theme button!
+*/
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+/* Smooth transitions for theme switching */
+*, *::before, *::after {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-primary-bg);
+  color: var(--color-primary-text);
+  font-family: serif;
+  width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Japanese Text Styling */
+.japanese-text {
+  font-family: 'Kouzan', serif;
+  font-size: 1.3em;
+}
+
+/* Japanese Name Styling (alias for compatibility) */
+.japanese-name {
+  font-family: 'Kouzan', serif;
+}
+
+/* Reset some default styles that might interfere */
+#root {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  background: transparent;
+}
+
+/* Main container - let the library manage position and overflow */
+#main-container {
+  min-height: 100vh;
+  width: 100vw;
+  /* position: relative and overflow: hidden will be set by grained.js */
+}
+
+/* According to grained.js docs: make content appear above grain */
+#main-container > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* The .grained element is automatically created by the library */
+/* We just need to ensure it doesn't block interactions */
+.grained {
+  pointer-events: none !important;
+}
+
+/* Utility classes for common color patterns */
+.bg-primary {
+  background-color: var(--color-primary-bg);
+}
+
+.text-primary {
+  color: var(--color-primary-text);
+}
+
+.hover-bg:hover {
+  background-color: var(--color-hover-bg);
+}
+
+.border-primary {
+  border-color: var(--color-border);
+}
+
+/* Navbar specific styling */
+.navbar {
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 2px 4px var(--color-shadow-light);
+}
+
+/* Theme-specific navbar background colors */
+[data-theme="dark"] .navbar {
+  background-color: #080808 !important;
+}
+
+[data-theme="light"] .navbar {
+  background-color: #646A58 !important;
+}
+
+/* Legacy styles (keeping for compatibility) */
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em var(--color-accent-link));
 }
 
 @keyframes logo-spin {
@@ -35,6 +203,7 @@
 
 .card {
   padding: 2em;
+  background-color: var(--color-card-bg);
 }
 
 .read-the-docs {

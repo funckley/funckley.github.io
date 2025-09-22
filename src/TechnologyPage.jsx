@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useLanguage } from './contexts/LanguageContext';
 
 // Custom hook for responsive design
 function useWindowSize() {
@@ -26,12 +27,13 @@ function useWindowSize() {
 
 export default function TechnologyPage() {
   const { width } = useWindowSize();
+  const { t } = useLanguage();
   const isMobile = width <= 768;
   
   return (
     <div style={{ 
       paddingTop: 80, 
-      color: '#FCFAF2',
+      color: 'var(--color-primary-text)',
       padding: isMobile ? '80px 1rem 2rem 1rem' : '80px 2rem 2rem 2rem',
       maxWidth: 1300,
       margin: '0 auto'
@@ -39,11 +41,11 @@ export default function TechnologyPage() {
       <h1 style={{
         fontSize: isMobile ? '2rem' : '2.5rem',
         marginBottom: isMobile ? '1rem' : '1.5rem'
-      }}>Technology</h1>
+      }}>{t('pages.technology.title')}</h1>
       <p style={{
         fontSize: isMobile ? '1rem' : '1.1rem',
         lineHeight: 1.6
-      }}>Technology page content goes here.</p>
+      }}>{t('pages.technology.content')}</p>
     </div>
   );
 }
