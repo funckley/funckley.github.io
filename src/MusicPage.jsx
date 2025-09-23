@@ -315,28 +315,6 @@ export default function MusicPage() {
         ))}
       </section>
 
-      {/* Romantic Section */}
-      <section style={{ marginBottom: '3rem' }}>
-        <h2 style={{
-          fontSize: isMobile ? '1.5rem' : '1.8rem',
-          marginBottom: '2rem',
-          color: 'var(--color-primary-text)'
-        }}>
-          Neo-Romantic
-        </h2>
-        
-        {romanticCompositions.map(composition => (
-          <MediaCard
-            key={composition.id}
-            title={composition.title}
-            audioSrc={composition.audioSrc}
-            videoSrc={composition.videoSrc}
-            type={composition.type}
-            isMobile={isMobile}
-          />
-        ))}
-      </section>
-
       {/* Serialism Section */}
       <section style={{ marginBottom: '3rem' }}>
         <h2 style={{
