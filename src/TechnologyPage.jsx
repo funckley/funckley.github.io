@@ -314,6 +314,7 @@ export default function TechnologyPage() {
       title: "Pepper Ghost, A Future Data Interpretation of Past Species",
       description: "Project description coming soon...",
       imageUrl: null,
+      videoUrls: ["assets/video/demo_pepperghost.mp4"],
       projectUrl: null
     }
   ];
