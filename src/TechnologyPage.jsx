@@ -149,53 +149,66 @@ function ProjectCard({ title, description, imageUrl, videoUrls, youtubeUrl, proj
           </div>
         )}
         
-        {/* // Project Image */}
+        {/* Project Image(s) */}
         {imageUrl && (
-          <div style={{
-            width: '100%',
-            marginBottom: '1.5rem',
-            borderRadius: '8px',
-            overflow: 'hidden',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            background: '#000'
-          }}>
-            {/* Support array of images */}
-            {Array.isArray(imageUrl)
-              ? imageUrl.map((img, idx) => (
-                  <img
-                    key={idx}
-                    src={img}
-                    alt={title}
-                    style={{
-                      width: '100%',
-                      height: 'auto',
-                      maxHeight: isMobile ? '300px' : '400px',
-                      objectFit: 'contain',
-                      borderRadius: '8px',
-                      background: '#000',
-                      display: 'block',
-                      marginRight: idx < imageUrl.length - 1 ? '1rem' : 0
-                    }}
-                  />
-                ))
-              : (
-                  <img
-                    src={imageUrl}
-                    alt={title}
-                    style={{
-                      width: '100%',
-                      height: 'auto',
-                      maxHeight: isMobile ? '300px' : '400px',
-                      objectFit: 'contain',
-                      borderRadius: '8px',
-                      background: '#000',
-                      display: 'block'
-                    }}
-                  />
-                )}
-          </div>
+          Array.isArray(imageUrl) ? (
+            <div
+              style={{
+                width: '100%',
+                marginBottom: '1.5rem',
+                borderRadius: '8px',
+                overflow: 'hidden',
+                display: 'flex',
+                flexDirection: isMobile ? 'column' : 'row',
+                gap: '1rem',
+                background: '#000',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}
+            >
+              {imageUrl.map((img, idx) => (
+                <img
+                  key={idx}
+                  src={img}
+                  alt={title}
+                  style={{
+                    width: isMobile ? '100%' : '48%',
+                    height: 'auto',
+                    maxHeight: isMobile ? '300px' : '400px',
+                    objectFit: 'contain',
+                    borderRadius: '8px',
+                    background: '#000',
+                    display: 'block'
+                  }}
+                />
+              ))}
+            </div>
+          ) : (
+            <div style={{
+              width: '100%',
+              marginBottom: '1.5rem',
+              borderRadius: '8px',
+              overflow: 'hidden',
+              background: '#000',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}>
+              <img
+                src={imageUrl}
+                alt={title}
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  maxHeight: isMobile ? '300px' : '400px',
+                  objectFit: 'contain',
+                  borderRadius: '8px',
+                  background: '#000',
+                  display: 'block'
+                }}
+              />
+            </div>
+          )
         )}
         
         {description && (
@@ -291,7 +304,7 @@ export default function TechnologyPage() {
       id: 7,
       title: "ConcertVR: An Immersive VR Music Experience",
       description: "ConcertVR is a virtual reality project that reimagines the experience of live musical performance through immersive audiovisual design. Centered on a performance of a percussion work by Iannis Xenakis, the project places the viewer inside a dynamically rendered concert space, combining spatial audio and real-time audio-responsive visuals to create a deeply engaging sensory environment. Developed in Unity as part of the Immersive Media course at the University of Michigan (Winter 2024), and directed by Anıl Çamcı, ConcertVR explores how spatial listening and responsive design can enhance presence and perception in virtual performance.\n\nThe auditory design involved multi-microphone recording techniques to capture the nuance and directional quality of the percussion performance. This spatial information was then used to drive a custom particle system, programmed to react dynamically to different audio input streams. As a result, visual elements—such as color bursts, ambient motion, and a central \"portal\" effect—respond in real time to variations in sound intensity and frequency content, providing a visual mapping of the music's energy and structure.\n\nMy primary contributions included the design and implementation of this audio-responsive particle system, along with collaborative work on the recording and post-processing stages. I also contributed to optimizing the human-computer interaction design for VR, ensuring the system responded fluidly to both user perspective and real-time audio cues.\n\nResearch Areas: Virtual Reality, Spatial Audio Design, Real-Time Audio Visualization, Immersive Performance, Human-Computer Interaction",
-      imageUrl: "/assets/img/ConcertVR.png",
+      imageUrl: ["/assets/img/ConcertVR1.png", "/assets/img/ConcertVR2.png"],
       projectUrl: null
     },
     {
