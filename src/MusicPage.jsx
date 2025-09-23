@@ -160,19 +160,19 @@ export default function MusicPage() {
     {
       id: 2,
       title: "Bandar-e Anzalī",
-      audioSrc: "/assets/audio/Bandar-e Anzali.wav",
+      audioSrc: "/assets/audio/Bandar-e Anzali.mp3",
       type: "audio"
     },
     {
       id: 3,
       title: "Ivy: For Violin, Clarinet, Xylophone, Celeste, and Electronics",
-      audioSrc: "/assets/audio/Ivy For Violin, Clarinet, Xylophone, Celeste, and Electronics.wav",
+      audioSrc: "/assets/audio/Ivy For Violin, Clarinet, Xylophone, Celeste, and Electronics.mp3",
       type: "audio"
     },
     {
       id: 4,
       title: "Kitchenware in Sets of Seven",
-      audioSrc: "/assets/audio/Kitchenware in Sets of Seven.wav",
+      audioSrc: "/assets/audio/Kitchenware in Sets of Seven.mp3",
       type: "audio"
     }
   ];
@@ -181,13 +181,13 @@ export default function MusicPage() {
     {
       id: 5,
       title: "Sinfonia for Harpsichord",
-      audioSrc: "/assets/audio/Three-Part Invention for Harpsichord.wav",
+      audioSrc: "/assets/audio/Three-Part Invention for Harpsichord.mp3",
       type: "audio"
     },
     {
       id: 6,
       title: "Fugue in C minor for Organ",
-      audioSrc: "/assets/audio/Fugue in C minor Organ.wav",
+      audioSrc: "/assets/audio/Fugue in C minor Organ.mp3",
       type: "audio"
     }
   ];
@@ -202,7 +202,7 @@ export default function MusicPage() {
     {
       id: 8,
       title: "Nocturne in E♭",
-      audioSrc: "/assets/audio/Nocturne in E♭.wav",
+      audioSrc: "/assets/audio/Nocturne in E♭.mp3",
       type: "audio"
     }
   ];
@@ -211,13 +211,13 @@ export default function MusicPage() {
     {
       id: 9,
       title: "Temporal Knot for Piano",
-      audioSrc: "/assets/audio/Temporal Knot for Piano.wav",
+      audioSrc: "/assets/audio/Temporal Knot for Piano.mp3",
       type: "audio"
     },
     {
       id: 10,
       title: "Fragments: A Bagatelle",
-      audioSrc: "/assets/audio/Fragments A Bagatelle.wav",
+      audioSrc: "/assets/audio/Fragments A Bagatelle.mp3",
       type: "audio"
     },
     {
