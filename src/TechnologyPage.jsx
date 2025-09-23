@@ -149,24 +149,52 @@ function ProjectCard({ title, description, imageUrl, videoUrls, youtubeUrl, proj
           </div>
         )}
         
-        {/* Project Image */}
+        {/* // Project Image */}
         {imageUrl && (
           <div style={{
             width: '100%',
-            height: isMobile ? '200px' : '250px',
             marginBottom: '1.5rem',
             borderRadius: '8px',
-            overflow: 'hidden'
+            overflow: 'hidden',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            background: '#000'
           }}>
-            <img 
-              src={imageUrl} 
-              alt={title}
-              style={{
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover'
-              }}
-            />
+            {/* Support array of images */}
+            {Array.isArray(imageUrl)
+              ? imageUrl.map((img, idx) => (
+                  <img
+                    key={idx}
+                    src={img}
+                    alt={title}
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      maxHeight: isMobile ? '300px' : '400px',
+                      objectFit: 'contain',
+                      borderRadius: '8px',
+                      background: '#000',
+                      display: 'block',
+                      marginRight: idx < imageUrl.length - 1 ? '1rem' : 0
+                    }}
+                  />
+                ))
+              : (
+                  <img
+                    src={imageUrl}
+                    alt={title}
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      maxHeight: isMobile ? '300px' : '400px',
+                      objectFit: 'contain',
+                      borderRadius: '8px',
+                      background: '#000',
+                      display: 'block'
+                    }}
+                  />
+                )}
           </div>
         )}
         
@@ -224,7 +252,7 @@ export default function TechnologyPage() {
       id: 2,
       title: "The Droodle Task: Propelling Human Creativity with LLMs",
       description: "The Droodle Task is a research project conducted at the Robot Studio in the Department of Robotics, University of Michigan, exploring how large language models (LLMs) can serve as collaborative partners in enhancing human creativity. In collaboration with Patrícia Alves-Oliveira, Peter H. Kahn, Jr., and robotics researcher Trey Davis, the project investigates how AI-driven interaction can stimulate original and imaginative responses in humans through a structured creative activity.\n\nAt the core of the study is the Droodle Captioning Task, in which participants are presented with ambiguous, hand-drawn images (\"droodles\") and asked to generate surprising captions that shift the viewer's perception. The research examines how LLMs can guide users through this process by combining visual interpretation with verbal imagination, ultimately boosting creative engagement.\n\nKey innovations include the development of creative collaboration modules that balance divergent and convergent thinking, process-oriented prompting techniques to sustain motivation, and initial explorations of multi-agent systems where AI agents critique or expand upon one another's suggestions. The project spans multiple domains, including computational creativity, human-AI collaboration, natural language processing, human-centered design, and embodied AI.",
-      imageUrl: null,
+      imageUrl: "/assets/img/Droodle.png",
       projectUrl: null
     },
     {
@@ -239,7 +267,7 @@ export default function TechnologyPage() {
       id: 4,
       title: "Deep Drawing: An Intermedia AI Co-Performer",
       description: "Deep Drawing is an intermedia AI co-performer project developed as part of the FEAST (Faculty Engineering/Arts Student Teams) initiative at ArtsEngine, University of Michigan, in collaboration with Julie Zhu, John Granzow, and Zhiyu Zhang. The project explores the role of artificial intelligence in live, cross-modal performance, combining drawing and sound into an interactive system that produces real-time generative visuals. Using contact microphones embedded in a tabletop surface, the system captures audio signals produced by drawing or writing. These sound inputs—often highly variable and noisy—are processed through a deep learning model that transforms them into projected digital art during performance.\n\nThe project addresses key technical challenges in real-time audio analysis, including the interpretation of low-amplitude, high-variability drawing sounds and the limitations of time-of-arrival methods due to the rapid speed of sound. Achieving responsive performance required the development of a novel machine learning architecture that improves both processing speed and predictive accuracy under tight computational constraints.\n\nDeep Drawing investigates the expressive possibilities of human-AI co-performance, offering a new framework for algorithmic creativity across sensory modalities. The project was presented and performed at the AI Music Creativity Conference (AIMC 2024) at Oxford University.\n\nResearch Areas: Computational Creativity, Human-Computer Interaction, Artificial Intelligence, Interactive Systems Design, Digital Signal Processing",
-      imageUrl: null,
+      imageUrl: "/assets/img/DeepDrawing.png",
       videoUrls: ["/assets/video/DeepDrawing.mp4", "/assets/video/DeepDrawing2.gif"],
       projectUrl: null
     },
@@ -255,7 +283,7 @@ export default function TechnologyPage() {
       id: 6,
       title: "Kill the Priest",
       description: "Kill the Priest is a first-person mystery game developed in Unity, combining interactive storytelling, suspenseful gameplay, and immersive audiovisual design. Set in a shadowy, Victorian-era estate, players assume the role of an investigator tasked with uncovering the truth behind a series of unexplained disappearances. Originally created as an introductory game development project, the game blends basic mechanics—such as shooting and item discovery—with atmospheric world-building to deliver a compelling, text-free narrative experience. The project was later adapted into virtual reality (VR) to deepen immersion and expand on its interactive potential.\n\nPlayers navigate a richly layered environment where clues are embedded in the architecture, lighting, and sound. The visual and sonic design draws from Gothic aesthetics, using carefully selected textures, dim lighting, and ambient audio to evoke an atmosphere of mystery and unease. Core gameplay includes exploratory mechanics, weapon-based interaction, and environmental storytelling.\n\nThe VR adaptation introduced new challenges and opportunities—requiring redesigns in player navigation, shooting mechanics, and environmental scale. The use of VR controllers enhanced sensory engagement, allowing players to physically aim, explore, and interact with the world in more intuitive ways. This shift also laid the groundwork for more sophisticated storytelling mechanisms, including spatial audio cues and interactive objects that reveal hidden elements of the game's backstory.\n\nResearch Areas: Interactive Storytelling, Immersive Media, VR Design, First-Person Game Mechanics, Auditory Immersion, Narrative World-Building",
-      imageUrl: null,
+      imageUrl: "/assets/img/KillThePriest.jpg",
       youtubeUrl: "https://youtu.be/Rdqe51TpzUM",
       projectUrl: null
     },
@@ -263,7 +291,7 @@ export default function TechnologyPage() {
       id: 7,
       title: "ConcertVR: An Immersive VR Music Experience",
       description: "ConcertVR is a virtual reality project that reimagines the experience of live musical performance through immersive audiovisual design. Centered on a performance of a percussion work by Iannis Xenakis, the project places the viewer inside a dynamically rendered concert space, combining spatial audio and real-time audio-responsive visuals to create a deeply engaging sensory environment. Developed in Unity as part of the Immersive Media course at the University of Michigan (Winter 2024), and directed by Anıl Çamcı, ConcertVR explores how spatial listening and responsive design can enhance presence and perception in virtual performance.\n\nThe auditory design involved multi-microphone recording techniques to capture the nuance and directional quality of the percussion performance. This spatial information was then used to drive a custom particle system, programmed to react dynamically to different audio input streams. As a result, visual elements—such as color bursts, ambient motion, and a central \"portal\" effect—respond in real time to variations in sound intensity and frequency content, providing a visual mapping of the music's energy and structure.\n\nMy primary contributions included the design and implementation of this audio-responsive particle system, along with collaborative work on the recording and post-processing stages. I also contributed to optimizing the human-computer interaction design for VR, ensuring the system responded fluidly to both user perspective and real-time audio cues.\n\nResearch Areas: Virtual Reality, Spatial Audio Design, Real-Time Audio Visualization, Immersive Performance, Human-Computer Interaction",
-      imageUrl: null,
+      imageUrl: "/assets/img/ConcertVR.png",
       projectUrl: null
     },
     {
@@ -278,7 +306,7 @@ export default function TechnologyPage() {
       id: 9,
       title: "Sonic Toy Land: A Virtual Interface for Musical Expression",
       description: "Sonic Toy Land is a Virtual Interface for Musical Expression (VIME) that blends childhood nostalgia with advanced spatial audio design in an immersive VR environment. Developed in collaboration with Ayden Williams and Maddie Vassalo, the project transforms a life-sized virtual playroom into an interactive musical space where users arrange toys to create custom sonic patterns. At the core of the system is a train-track-based sequencer, allowing users to position and manipulate toys along a moving track to control rhythm, instrumentation, and playback sequences.\n\nBy combining playful interaction with technical precision, Sonic Toy Land offers an intuitive, exploratory interface that invites users to engage with musical structure through tactile spatial arrangements. The use of real-time spatial audio enhances immersion, with sounds dynamically shifting in perspective and position based on the user's location and actions within the VR environment. Carefully crafted visual and auditory feedback ensures that each interaction—whether placing a toy, adjusting the train, or triggering a musical phrase—feels expressive and responsive.\n\nSonic Toy Land explores how virtual environments can foster creativity and musical engagement through non-traditional interfaces, redefining how users compose, perform, and experience music in VR.\n\nResearch Areas: Virtual Musical Instruments, Spatial Audio, VR Interaction Design, Playful Interfaces, Music Technology",
-      imageUrl: null,
+      imageUrl: ["/assets/img/SonicToyLand.png", "/assets/img/SonicToyLand2.png"],
       projectUrl: null
     },
     {
