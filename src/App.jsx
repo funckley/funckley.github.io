@@ -492,51 +492,6 @@ function HomePage() {
           </div>
         </div>
       </Section>
-      <Section id="projects">
-        {/* Projects grid placeholder */}
-        <div style={{ 
-          color: 'var(--color-primary-text)', 
-          fontSize: isMobile ? '1.3rem' : '1.5rem', 
-          margin: '2rem 0 1.5rem 0' 
-        }}>{t('projects.title')}</div>
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: isMobile ? '1fr' : 'repeat(auto-fit, minmax(340px, 1fr))', 
-          gap: '2rem' 
-        }}>
-          {/* Example project card */}
-          <div style={{ 
-            background: 'var(--color-card-bg)', 
-            borderRadius: 8, 
-            overflow: 'hidden', 
-            padding: 0 
-          }}>
-            <img src="/assets/img/project1.jpg" alt="SoundInk" style={{ 
-              width: '100%', 
-              height: 180, 
-              objectFit: 'cover' 
-            }} />
-            <div style={{ padding: '1rem' }}>
-              <a href="#" style={{ 
-                color: 'var(--color-primary-text)', 
-                fontWeight: 500 
-              }}>{t('projects.soundink.title')}</a>
-              <div style={{ 
-                fontSize: '0.95rem', 
-                margin: '0.5rem 0' 
-              }}>
-                {t('projects.soundink.description')}
-              </div>
-              <a href="#" style={{ 
-                color: 'var(--color-primary-text)', 
-                fontStyle: 'italic', 
-                fontSize: '0.95rem' 
-              }}>{t('projects.soundink.link')}</a>
-            </div>
-          </div>
-          {/* Add more project cards as needed */}
-        </div>
-      </Section>
     </main>
   )
 }

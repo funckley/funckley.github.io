@@ -101,7 +101,7 @@ function ProjectCard({ title, description, imageUrl, videoUrls, youtubeUrl, proj
           </div>
         )}
         
-        {/* Local Videos */}
+        {/* Local Videos & GIFs */}
         {videoUrls && videoUrls.length > 0 && (
           <div style={{
             marginBottom: '1.5rem',
@@ -109,25 +109,41 @@ function ProjectCard({ title, description, imageUrl, videoUrls, youtubeUrl, proj
             flexDirection: isMobile ? 'column' : 'row',
             gap: '1rem'
           }}>
-            {videoUrls.map((videoUrl, index) => (
+            {videoUrls.map((mediaUrl, index) => (
               <div key={index} style={{ flex: 1 }}>
-                <video 
-                  controls 
-                  style={{
-                    width: '100%',
-                    height: 'auto',
-                    maxHeight: isMobile ? '250px' : '300px',
-                    borderRadius: '8px',
-                    backgroundColor: '#000',
-                    display: 'block'
-                  }}
-                  preload="metadata"
-                >
-                  <source src={videoUrl} type="video/mp4" />
-                  <source src={videoUrl} type="video/webm" />
-                  <source src={videoUrl} type="video/mov" />
-                  Your browser does not support the video element.
-                </video>
+                {mediaUrl.endsWith('.gif') ? (
+                  <img
+                    src={mediaUrl}
+                    alt={title + ' demo'}
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      maxHeight: isMobile ? '250px' : '300px',
+                      borderRadius: '8px',
+                      backgroundColor: '#000',
+                      display: 'block',
+                      objectFit: 'contain'
+                    }}
+                  />
+                ) : (
+                  <video
+                    controls
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      maxHeight: isMobile ? '250px' : '300px',
+                      borderRadius: '8px',
+                      backgroundColor: '#000',
+                      display: 'block'
+                    }}
+                    preload="metadata"
+                  >
+                    <source src={mediaUrl} type="video/mp4" />
+                    <source src={mediaUrl} type="video/webm" />
+                    <source src={mediaUrl} type="video/mov" />
+                    Your browser does not support the video element.
+                  </video>
+                )}
               </div>
             ))}
           </div>
