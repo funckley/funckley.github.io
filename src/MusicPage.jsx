@@ -177,15 +177,30 @@ export default function MusicPage() {
     }
   ];
 
-  const romanticCompositions = [
+  const baroqueCompositions = [
     {
       id: 5,
+      title: "Sinfonia for Harpsichord",
+      audioSrc: "/assets/audio/Three-Part Invention for Harpsichord.wav",
+      type: "audio"
+    },
+    {
+      id: 6,
+      title: "Fugue in C minor for Organ",
+      audioSrc: "/assets/audio/Fugue in C minor Organ.wav",
+      type: "audio"
+    }
+  ];
+
+  const romanticCompositions = [
+    {
+      id: 7,
       title: "Rondo in B♭ minor",
       audioSrc: "/assets/audio/Rondo in B♭ minor.mp3",
       type: "audio"
     },
     {
-      id: 6,
+      id: 8,
       title: "Nocturne in E♭",
       audioSrc: "/assets/audio/Nocturne in E♭.wav",
       type: "audio"
@@ -194,19 +209,19 @@ export default function MusicPage() {
 
   const serialismCompositions = [
     {
-      id: 7,
+      id: 9,
       title: "Temporal Knot for Piano",
       audioSrc: "/assets/audio/Temporal Knot for Piano.wav",
       type: "audio"
     },
     {
-      id: 8,
+      id: 10,
       title: "Fragments: A Bagatelle",
       audioSrc: "/assets/audio/Fragments A Bagatelle.wav",
       type: "audio"
     },
     {
-      id: 9,
+      id: 11,
       title: "String Quartet No. 1",
       audioSrc: "/assets/audio/String Quartet No. 1.mp3",
       type: "audio"
@@ -256,6 +271,50 @@ export default function MusicPage() {
         ))}
       </section>
 
+      {/* Neo-Baroque Section */}
+      <section style={{ marginBottom: '3rem' }}>
+        <h2 style={{
+          fontSize: isMobile ? '1.5rem' : '1.8rem',
+          marginBottom: '2rem',
+          color: 'var(--color-primary-text)'
+        }}>
+          Neo-Baroque
+        </h2>
+
+        {baroqueCompositions.map(composition => (
+          <MediaCard
+            key={composition.id}
+            title={composition.title}
+            audioSrc={composition.audioSrc}
+            videoSrc={composition.videoSrc}
+            type={composition.type}
+            isMobile={isMobile}
+          />
+        ))}
+      </section>
+
+      {/* Neo-Romantic Section */}
+      <section style={{ marginBottom: '3rem' }}>
+        <h2 style={{
+          fontSize: isMobile ? '1.5rem' : '1.8rem',
+          marginBottom: '2rem',
+          color: 'var(--color-primary-text)'
+        }}>
+          Neo-Romantic
+        </h2>
+        
+        {romanticCompositions.map(composition => (
+          <MediaCard
+            key={composition.id}
+            title={composition.title}
+            audioSrc={composition.audioSrc}
+            videoSrc={composition.videoSrc}
+            type={composition.type}
+            isMobile={isMobile}
+          />
+        ))}
+      </section>
+
       {/* Romantic Section */}
       <section style={{ marginBottom: '3rem' }}>
         <h2 style={{
@@ -263,7 +322,7 @@ export default function MusicPage() {
           marginBottom: '2rem',
           color: 'var(--color-primary-text)'
         }}>
-          Romantic
+          Neo-Romantic
         </h2>
         
         {romanticCompositions.map(composition => (
