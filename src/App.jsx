@@ -562,7 +562,7 @@ function App() {
     // Apply grain to main-container (not body) - this is the proper way
     try {
       window.grained('#main-container', {
-        animate: true,
+        animate: false,
         patternWidth: 95,
         patternHeight: 54,
         grainOpacity: currentTheme === 'light' ? 0.08 : 0.05,
