@@ -18,8 +18,8 @@ import {
 
 const navLinks = [
   { label: 'nav.home', to: '/' },
-  { label: 'nav.technology', to: '/technology' },
   { label: 'nav.theory', to: '/theory' },
+  { label: 'nav.technology', to: '/technology' },
   { label: 'nav.music', to: '/music' },
   { label: 'nav.contact', to: '/contact' },
 ]

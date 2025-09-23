@@ -201,7 +201,7 @@ export default function TechnologyPage() {
       title: "SoundInk: Music Therapy & Education Application",
       description: "SoundInk is an interactive web-based application designed to explore the intersection of technology, creativity, and therapeutic engagement. Developed using React and the Web Audio API, the tool enables users to generate musical compositions through intuitive, gesture-based drawing, supporting both mouse and touchscreen interactions. Originally conceived as a platform for music therapy and educational outreach, SoundInk allows users to create sound by drawing on a canvas, with parameters such as color, instrument selection, tempo, and pitch directly influencing the resulting audio output. The project emphasizes ease of use, creative freedom, and multisensory interaction, making music creation approachable and engaging for users of all backgrounds.\n\nPrincipal Investigators: Anıl Çamcı, Yousef El-Magharbel.",
       imageUrl: null, // Add image path when available
-      videoUrls: ['/assets/video/SoundInk.mov'],
+      youtubeUrl: "https://youtu.be/X2v7K0LeHaI",
       projectUrl: null // Add project URL when available
     },
     {
@@ -255,7 +255,7 @@ export default function TechnologyPage() {
       title: "Fear Follower",
       description: "Fear Follower is an interactive installation created for Halloween 2023, blending motion capture, robotics, and immersive audiovisual design to produce a heightened sensory experience of surveillance, tension, and pursuit. Developed in collaboration with SinYu Deng (visual animation) and Adam Schmidt (robot construction and control), the project explores how technology can be used to provoke visceral emotional responses through interactive storytelling and spatial presence.\n\nThe installation centers around a projected eyeball that visually tracks the user's movement in real time, accompanied by a robotic hand that follows the user across the space. This eerie, responsive environment leverages marker-based motion tracking (via specially designed glasses and gloves) to link user behavior directly to both the robotic and visual systems. As the robotic hand moves closer, the soundscape—crafted using granular synthesis and dynamic filtering in SuperCollider and Max/MSP—intensifies, building suspense through spatialized audio cues that reflect proximity and motion.\n\nVisual feedback is handled through TouchDesigner, where the eyeball's gaze direction and color intensity react to hand movement, deepening the sense of being watched. The robot itself is controlled via Max/MSP and Arduino, and uses real-time motion data to continually orient toward the user. Its speed and direction shift based on the velocity of the user's hand, creating a sense of lifelike pursuit and unpredictable engagement.\n\nResearch Areas: Human-Robot Interaction, Motion Capture Technology, Immersive Sound Design, Audiovisual Synchronization, Interactive Installation Art",
       imageUrl: null,
-      videoUrls: ['/assets/video/Fear Follower - Demo.mov'],
+      youtubeUrl: "https://youtu.be/LVjrf0Ow-ZU",
       projectUrl: null
     },
     {
