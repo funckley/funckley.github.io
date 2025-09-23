@@ -363,27 +363,87 @@ function HomePage() {
           flexWrap: 'wrap',
           flexDirection: isMobile ? 'column' : 'row'
         }}>
-          <div style={{ 
-            flex: isMobile ? 'none' : '0 0 340px', 
-            width: isMobile ? '100%' : 'auto',
-            maxWidth: isMobile ? '280px' : '340px',
-            minWidth: isMobile ? '200px' : '220px', 
-            borderRadius: '0 0 0 0', 
-            overflow: 'hidden', 
-            background: 'var(--color-primary-bg)',
-            alignSelf: isMobile ? 'center' : 'auto'
-          }}>
-            {/* Replace with your image */}
-            <img src="/assets/img/IMG_0441.JPG" alt="Erfun Ackley" style={{ 
-              width: '100%', 
-              display: 'block', 
-              objectFit: 'cover', 
-              height: isMobile ? '220px' : '260px' 
+          <div
+            style={{
+              marginTop: isMobile ? '30px' : '25px',
+              marginBottom: isMobile ? '10px' : undefined,
+              paddingTop: isMobile ? '0' : undefined,
+              paddingBottom: isMobile ? '0' : undefined,
+              flex: isMobile ? 'none' : '0 0 340px',
+              width: isMobile ? '100%' : 'auto',
+              maxWidth: isMobile ? '100%' : '140px',
+              minWidth: isMobile ? '100%' : '110px',
+              minHeight: isMobile ? '80px' : '260px',
+              borderRadius: '0 0 0 0',
+              overflow: 'hidden',
+              background: 'var(--color-primary-bg)',
+              alignSelf: isMobile ? 'center' : 'auto',
+              display: 'flex',
+              flexDirection: isMobile ? 'row' : 'column',
+              gap: isMobile ? '0' : '0rem',
+              justifyContent: isMobile ? 'center' : 'flex-start',
+              alignItems: 'center'
+            }}
+          >
+            <img src="/assets/img/IMG_0441.JPG" alt="First" style={{
+              width: isMobile ? '20vw' : '100%',
+              minWidth: isMobile ? '60px' : undefined,
+              maxWidth: isMobile ? '80px' : undefined,
+              display: 'block',
+              objectFit: 'cover',
+              height: isMobile ? '80px' : '160px',
+              margin: 0,
+              padding: 0,
+              border: 'none'
+            }} />
+            <img src="/assets/img/IMG_0469.JPG" alt="Second" style={{
+              width: isMobile ? '20vw' : '100%',
+              minWidth: isMobile ? '60px' : undefined,
+              maxWidth: isMobile ? '80px' : undefined,
+              display: 'block',
+              objectFit: 'cover',
+              height: isMobile ? '80px' : '160px',
+              margin: 0,
+              padding: 0,
+              border: 'none'
+            }} />
+            <img src="/assets/img/IMG_0440.JPG" alt="Third" style={{
+              width: isMobile ? '20vw' : '100%',
+              minWidth: isMobile ? '60px' : undefined,
+              maxWidth: isMobile ? '80px' : undefined,
+              display: 'block',
+              objectFit: 'cover',
+              height: isMobile ? '80px' : '160px',
+              margin: 0,
+              padding: 0,
+              border: 'none'
+            }} />
+            <img src="/assets/img/IMG_0442.JPG" alt="Fourth" style={{
+              width: isMobile ? '20vw' : '100%',
+              minWidth: isMobile ? '60px' : undefined,
+              maxWidth: isMobile ? '80px' : undefined,
+              display: 'block',
+              objectFit: 'cover',
+              height: isMobile ? '80px' : '160px',
+              margin: 0,
+              padding: 0,
+              border: 'none'
+            }} />
+            <img src="/assets/img/IMG_0471.JPG" alt="Fifth" style={{
+              width: isMobile ? '20vw' : '100%',
+              minWidth: isMobile ? '60px' : undefined,
+              maxWidth: isMobile ? '80px' : undefined,
+              display: 'block',
+              objectFit: 'cover',
+              height: isMobile ? '80px' : '160px',
+              margin: 0,
+              padding: 0,
+              border: 'none'
             }} />
           </div>
           <div style={{ 
             flex: 1, 
-            minWidth: isMobile ? '100%' : '260px',
+            minWidth: isMobile ? '100%' : '290px',
             textAlign: isMobile ? 'center' : 'left'
           }}>
             <p style={{ 
@@ -430,6 +490,10 @@ function HomePage() {
           </div>
         </div>
       </Section>
+      {/* Single image below education/experience section */}
+      <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '2rem 0 0 0', padding: 0 }}>
+        <img src="/assets/img/IMG_0479.JPG" alt="Below Education" style={{ width: isMobile ? '80vw' : '400px', maxWidth: '100%', height: 'auto', maxHeight: '160px', objectFit: 'cover', borderRadius: '0px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }} />
+      </div>
       <Section id="education" style={{ 
         display: 'flex', 
         flexWrap: 'wrap', 
@@ -476,8 +540,7 @@ function HomePage() {
             <div>{t('experience.robotics.department')}</div>
             <div style={{ color: 'var(--color-primary-text)', fontSize: '1rem' }}>{t('experience.robotics.location')}</div>
             <div style={{ fontStyle: 'italic', marginTop: 2 }}>{t('experience.robotics.role')}</div>
-            <div style={{ color: 'var(--color-primary-text)', fontSize: '1rem' }}>{t('experience.robotics.dates.0')}</div>
-            <div style={{ color: 'var(--color-primary-text)', fontSize: '1rem' }}>{t('experience.robotics.dates.1')}</div>
+            <div style={{ color: 'var(--color-primary-text)', fontSize: '1rem' }}>{t('experience.robotics.dates')}</div>
           </div>
             <div>{t('experience.pat.department')}</div>
             <div style={{ color: 'var(--color-primary-text)', fontSize: '1rem' }}>{t('experience.pat.location')}</div>
@@ -491,8 +554,31 @@ function HomePage() {
             <div style={{ color: 'var(--color-primary-text)', fontSize: '1rem' }}>{t('experience.stamps.date')}</div>
           </div>
         </div>
+      {/* Divider row of 7 horizontally stacked images */}
+      <div
+        style={{
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'center',
+          alignItems: 'center',
+          gap: 0,
+          margin: isMobile ? '0' : '0rem 0',
+          padding: 0,
+          overflow: 'hidden',
+          maxHeight: isMobile ? "50px" : "200px",
+        }}
+      >
+        <img src="/assets/img/IMG_0475.JPG" alt="Divider 1" style={{ width: '14.28vw', minWidth: 40, maxWidth: 120, height: isMobile ? 50 : "200px", objectFit: 'cover', margin: 0, padding: 0, border: 'none' }} />
+        <img src="/assets/img/IMG_0481.JPG" alt="Divider 2" style={{ width: '14.28vw', minWidth: 40, maxWidth: 120, height: isMobile ? 50 : "200px", objectFit: 'cover', margin: 0, padding: 0, border: 'none' }} />
+        <img src="/assets/img/IMG_0477.JPG" alt="Divider 3" style={{ width: '14.28vw', minWidth: 40, maxWidth: 120, height: isMobile ? 50 : "200px", objectFit: 'cover', margin: 0, padding: 0, border: 'none' }} />
+        <img src="/assets/img/IMG_0474.JPG" alt="Divider 4" style={{ width: '14.28vw', minWidth: 40, maxWidth: "120px", height: isMobile ? 50 : "200px", objectFit: 'cover', margin: 0, padding: 0, border: 'none' }} />
+        <img src="/assets/img/IMG_0482.JPG" alt="Divider 5" style={{ width: '14.28vw', minWidth: 40, maxWidth: 120, height: isMobile ? 50 : "200px", objectFit: 'cover', margin: 0, padding: 0, border: 'none' }} />
+        <img src="/assets/img/IMG_0480.JPG" alt="Divider 6" style={{ width: '14.28vw', minWidth: 40, maxWidth: 120, height: isMobile ? 50 : "200px", objectFit: 'cover', margin: 0, padding: 0, border: 'none' }} />
+        <img src="/assets/img/IMG_0476.JPG" alt="Divider 7" style={{ width: '14.28vw', minWidth: 40, maxWidth: 120, height: isMobile ? 50 : "200px", objectFit: 'cover', margin: 0, padding: 0, border: 'none' }} />
+      </div>
       </Section>
-    </main>
+  </main>
   )
 }
 
