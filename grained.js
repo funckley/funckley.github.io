@@ -42,10 +42,10 @@
             patternWidth: 100,
             patternHeight: 100,
             grainOpacity: 0.1,
-            grainDensity: 1,
+            grainDensity: 10000,
             grainWidth: 1,
             grainHeight: 1,
-            grainChaos: 0.5,
+            grainChaos: 0.3,
             grainSpeed: 20
 
         };
