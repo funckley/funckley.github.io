@@ -54,7 +54,7 @@
   --color-shadow-medium: rgba(0, 0, 0, 0.15);
   
   /* FILM GRAIN EFFECT - Real Noise */
-  --grain-size: 200px;              /* Size of noise pattern - smaller = finer noise */
+  --grain-size: 300px;              /* Size of noise pattern - smaller = finer noise */
   --grain-opacity: 0.5;           /* Slightly less noise opacity for light theme */
   
   /* ACCENT COLORS */

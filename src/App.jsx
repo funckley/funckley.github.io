@@ -94,13 +94,13 @@ function Navbar() {
             lineHeight: 1.2
           }}
         >
-          <div>Erfun Ackley</div>
+          <div>Evan Ackley</div>
           <div className="japanese-name" style={{
             fontSize: isMobile ? '0.8rem' : '1.2rem',
             opacity: 0.85,
             letterSpacing: '0.5px'
           }}>
-            アックリー エルファン
+            アックリー・エヴァン
           </div>
         </Link>        {/* Desktop Navigation */}
         {!isMobile && (
@@ -349,7 +349,7 @@ function HomePage() {
   
   return (
     <main style={{ 
-      maxWidth: 1300, 
+      maxWidth: 1100, 
       margin: '0 auto', 
       padding: isMobile ? '0 1rem' : isTablet ? '0 1.5rem' : '0 2rem' 
     }}>
@@ -479,7 +479,7 @@ function HomePage() {
               lineHeight: 1.7, 
               marginBottom: isMobile ? '1rem' : '1.5rem' 
             }}>
-              {t('bio.thesis_desc')}
+              <strong>{t('bio.thesis_desc')}</strong>
             </p>
             <p style={{ 
               fontSize: isMobile ? '1rem' : '1.1rem', 
@@ -604,9 +604,9 @@ function App() {
     try {
       window.grained('#main-container', {
         animate: false,
-        patternWidth: 95,
-        patternHeight: 54,
-        grainOpacity: currentTheme === 'light' ? 0.08 : 0.05,
+        patternWidth: 93,
+        patternHeight: 96,
+        grainOpacity: currentTheme === 'light' ? 0.093 : 0.02,
         grainDensity: 1,
         grainWidth: 1,
         grainHeight: 1
