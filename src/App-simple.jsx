@@ -11,7 +11,7 @@ function App() {
       padding: '20px',
       fontFamily: 'Arial, sans-serif'
     }}>
-      <h1>Erfun Ackley - Test Page</h1>
+      <h1>Evan Ackley - Test Page</h1>
       <p>This is a simplified version to test if React is loading properly.</p>
       <p>If you can see this, React is working and the issue is elsewhere.</p>
     </div>
