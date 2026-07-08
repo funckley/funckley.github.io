@@ -154,25 +154,25 @@ export default function MusicPage() {
     {
       id: 1,
       title: "A Composition for Guitar, Mundane Objects, and Electronics",
-      audioSrc: "/assets/audio/A Composition for Guitar, Mundane Objects, and Electronics.mp3",
+      audioSrc: "/assets/audio/CompositionforGuitarMundaneObjectsandElectronics.mp3",
       type: "audio"
     },
     {
       id: 2,
       title: "Bandar-e Anzalī",
-      audioSrc: "/assets/audio/Bandar-e Anzali.mp3",
+      audioSrc: "/assets/audio/Bandar-e-Anzali.mp3",
       type: "audio"
     },
     {
       id: 3,
       title: "Ivy: For Violin, Clarinet, Xylophone, Celeste, and Electronics",
-      audioSrc: "/assets/audio/Ivy For Violin, Clarinet, Xylophone, Celeste, and Electronics.mp3",
+      audioSrc: "/assets/audio/IvyForViolinClarinetXylophoneCelesteElectronics.mp3",
       type: "audio"
     },
     {
       id: 4,
       title: "Kitchenware in Sets of Seven",
-      audioSrc: "/assets/audio/Kitchenware in Sets of Seven.mp3",
+      audioSrc: "/assets/audio/KitchenwareinSetsOfSeven.mp3",
       type: "audio"
     }
   ];
@@ -181,13 +181,13 @@ export default function MusicPage() {
     {
       id: 5,
       title: "Sinfonia for Harpsichord",
-      audioSrc: "/assets/audio/Three-Part Invention for Harpsichord.mp3",
+      audioSrc: "/assets/audio/ThreePartInventionforHarpsichord.mp3",
       type: "audio"
     },
     {
       id: 6,
       title: "Fugue in C minor for Organ",
-      audioSrc: "/assets/audio/Fugue in C minor Organ.mp3",
+      audioSrc: "/assets/audio/FugueinCminorOrgan.mp3",
       type: "audio"
     }
   ];
@@ -196,13 +196,13 @@ export default function MusicPage() {
     {
       id: 7,
       title: "Rondo in B♭ minor",
-      audioSrc: "/assets/audio/Rondo in B♭ minor.mp3",
+      audioSrc: "/assets/audio/RondoinBflatminor.mp3",
       type: "audio"
     },
     {
       id: 8,
       title: "Nocturne in E♭",
-      audioSrc: "/assets/audio/Nocturne in E♭.mp3",
+      audioSrc: "/assets/audio/NocturneinEflat.mp3",
       type: "audio"
     }
   ];
@@ -211,19 +211,19 @@ export default function MusicPage() {
     {
       id: 9,
       title: "Temporal Knot for Piano",
-      audioSrc: "/assets/audio/Temporal Knot for Piano.mp3",
+      audioSrc: "/assets/audio/TemporalKnot.mp3",
       type: "audio"
     },
     {
       id: 10,
       title: "Fragments: A Bagatelle",
-      audioSrc: "/assets/audio/Fragments A Bagatelle.mp3",
+      audioSrc: "/assets/audio/FragmentsBagatelle.mp3",
       type: "audio"
     },
     {
       id: 11,
       title: "String Quartet No. 1",
-      audioSrc: "/assets/audio/String Quartet No. 1.mp3",
+      audioSrc: "/assets/audio/StringQuartetNo1.mp3",
       type: "audio"
     }
   ];
