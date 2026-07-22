@@ -150,7 +150,7 @@ function Navbar() {
                 }}
                 title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
               >
-                {theme === 'dark' ? '☀' : '☾'}
+                {theme === 'dark' ? '☼' : '☾'}
               </button>
               
               {/* Language switcher */}
@@ -206,7 +206,7 @@ function Navbar() {
               }}
               title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
             >
-              {theme === 'dark' ? '☀' : '☾'}
+              {theme === 'dark' ? '☼' : '☾'}
             </button>
             
             {/* Language switcher for mobile */}
