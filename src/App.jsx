@@ -83,8 +83,8 @@ function Navbar() {
         <Link 
           to="/" 
           style={{
-            fontFamily: 'serif',
-            fontSize: isMobile ? '1.2rem' : '1.4rem',
+            fontFamily: 'Gothic',
+            fontSize: isMobile ? '1.2rem' : '2rem',
             fontWeight: 400,
             color: 'var(--color-navbar-text)',
             textDecoration: 'none',
@@ -95,13 +95,6 @@ function Navbar() {
           }}
         >
           <div>Evan Ackley</div>
-          <div className="japanese-name" style={{
-            fontSize: isMobile ? '0.8rem' : '1.2rem',
-            opacity: 0.85,
-            letterSpacing: '0.5px'
-          }}>
-            アックリー・エヴァン
-          </div>
         </Link>        {/* Desktop Navigation */}
         {!isMobile && (
           <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>

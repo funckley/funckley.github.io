@@ -9,6 +9,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Gothic';
+  src: url('/fonts/Vighty.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* DARK THEME (Default) */
 :root,
 [data-theme="dark"] {
