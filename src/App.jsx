@@ -84,7 +84,7 @@ function Navbar() {
           to="/" 
           style={{
             fontFamily: 'Gothic',
-            fontSize: isMobile ? '1.2rem' : '2rem',
+            fontSize: isMobile ? '1.9rem' : '2rem',
             fontWeight: 400,
             color: 'var(--color-navbar-text)',
             textDecoration: 'none',
