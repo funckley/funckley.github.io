@@ -7,7 +7,7 @@
     "contact": "Contact"
   },
   "bio": {
-    "intro": "I am an independent researcher based in Tokyo, Japan, and an M.A. graduate of the University of Michigan. My research asks a central question: How should we understand human action, knowledge, and creativity in relation to intelligent computational systems? To address this question, I draw upon philosophy, economics, artificial intelligence, human-computer interaction, and the history of technology. My research is organized around three interconnected levels of analysis: the role of intelligent systems in human action, the epistemic foundations of computational systems, and the ways computational technologies reshape social institutions and technological change.",
+    "intro": "I am an independent researcher, software developer, interactive technologist, and composer based in Tokyo, Japan, and an M.A. graduate of the University of Michigan. My research asks a central question: How should we understand human action, knowledge, and creativity in relation to intelligent computational systems? To address this question, I draw upon philosophy, economics, artificial intelligence, human-computer interaction, and the history of technology. My research is organized around three interconnected levels of analysis: the role of intelligent systems in human action, the epistemic foundations of computational systems, and the ways computational technologies reshape social institutions and technological change.",
     "research_intro": "The following three levels provide the conceptual framework for my research program.",
     "research_1_title": "1. Human Action and Intelligent Systems",
     "research_1_desc": "This dimension investigates the relationship between purposeful human action and intelligent computational systems. It begins from the premise that human beings act by employing scarce means to pursue subjectively valued ends, and asks how computational systems augment, mediate, or extend these actions while remaining subject to the fundamental conditions of choice, scarcity, and human agency.",
@@ -15,8 +15,8 @@
     "research_2_desc": "This dimension investigates how knowledge is represented, acquired, and applied by different epistemic agents. Rather than assuming a universal computational paradigm, it examines how complex problems can be decomposed into sub-problems whose epistemic characteristics determine whether they are best addressed by human reasoning, symbolic AI, data-driven modeling, deep learning, or hybrid human-machine systems. The goal is to understand the theoretical strengths, limitations, and appropriate domains of each approach, and the principles by which they can be effectively integrated.",
     "research_3_title": "3. Technology, Society, and Institutions",
     "research_3_desc": "This dimension investigates how intelligent computational systems influence the coordination of human action at the societal level. It examines how interactions among human and computational agents give rise to institutions, markets, organizations, and other emergent forms of social order, while exploring how different computational paradigms reshape incentives, entrepreneurship, governance, and the organization of knowledge. Drawing upon philosophy, economics, and the history of technology, this dimension seeks to understand the institutional conditions under which different computational systems emerge, evolve, and flourish.",
-    "thesis_desc": "Creative and Technical Practice",
-    "artistic_practice": "Alongside my research, I am also active as a software developer, sound designer, and composer. Together, these activities provide a practical context for exploring interactive systems, computational creativity, and human-computer interaction."
+    "thesis_desc": " ",
+    "artistic_practice": " "
   },
   "education": {
     "title": "Education",
