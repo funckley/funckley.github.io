@@ -260,7 +260,7 @@ export default function TechnologyPage() {
       description: "SoundInk is an interactive web-based application designed to explore the intersection of technology, creativity, and therapeutic engagement. Developed using React and the Web Audio API, the tool enables users to generate musical compositions through intuitive, gesture-based drawing, supporting both mouse and touchscreen interactions. Originally conceived as a platform for music therapy and educational outreach, SoundInk allows users to create sound by drawing on a canvas, with parameters such as color, instrument selection, tempo, and pitch directly influencing the resulting audio output. The project emphasizes ease of use, creative freedom, and multisensory interaction, making music creation approachable and engaging for users of all backgrounds.\n\nPrincipal Investigators: Anıl Çamcı, Yousef El-Magharbel.\n\n The web application is only suitable for desktop and tablet browsers and is not optimized for mobile devices. For a demonstration of the application, please refer to the link below.",
       imageUrl: null, // Add image path when available
       youtubeUrl: "https://youtu.be/X2v7K0LeHaI",
-      projectUrl: "https://www.erfunackley.com/SoundInk/"
+      projectUrl: "https://www.evanackley.com/SoundInk/"
     },
     {
       id: 2,
